@@ -2,6 +2,7 @@
 'use client'
 // pages/index.js
 import { useEffect, useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserFormData } from '../../types'; 
 import './students.css'
 
@@ -18,7 +19,7 @@ const HomePage = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data: UserFormData[] = await response.json(); // Specify the type for the data variable
+        const data: UserFormData[] = await response.json(); 
         setUsers(data);
       } catch (error) {
         console.error('Fetch error:', error);
@@ -30,21 +31,29 @@ const HomePage = () => {
   }, []);
 
   return (
+   
     <div>
-     <center> <h1>Student Details</h1></center>
+      <center><h1>Student Details</h1></center>
       {error && <p>{error}</p>}
       <div className="user-container">
-        {users.map((user) => ( 
-          <div className="user-card" key={user._id}>
-            <h2>{user.name}</h2>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Phone Number:</strong> {user.phonenumber}</p>
-            <p><strong>Address:</strong> {user.address}</p>
-            <p><strong>Course:</strong> {user.course}</p>
-          </div>
+        {users.map((user) => (
+          <Card key={user._id} className="user-card">
+            <CardHeader>
+              <CardTitle>{user.name}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>
+                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>Phone Number:</strong> {user.phonenumber}</p>
+                <p><strong>Address:</strong> {user.address}</p>
+                <p><strong>Course:</strong> {user.course}</p>
+              </CardDescription>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
+      
   );
 };
 

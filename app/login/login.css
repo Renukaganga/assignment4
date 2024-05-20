@@ -1,78 +1,101 @@
-/* LoginForm.css */
+
 .login-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    background-color: #f9f9f9;
-    
-  }
-  
-  .login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  
-  }
-  
-  .login-container form {
-    display: flex;
-    
-    flex-direction: column;
-  }
-  
-  
-  .login-container label {
-    margin-bottom: 5px;
-  }
-  
-  .login-container input[type="text"],
-  .login-container input[type="password"] {
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .login-container button {
-    padding: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    
-  }
-  
-  .login-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 10px;
-  }
-  
-  .success {
-    color: green;
-    margin-top: 10px;
-  }
-  .user-card-container {
-    display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: #f7fafc; 
+}
 
-    gap: 20px;
-    padding-left: 0px;
-  }
-  
-  .user-card {
-    background-color: #cbe9eb;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width:100%;
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: larger;
-    padding-left: 10px;
-  }
-  
+.login-form-container {
+  background-color: #ffffff; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 0.5rem; 
+  padding: 30px 100px ;
+  width: 10%;
+  max-width: 48rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.login-heading {
+  font-size: 1.5rem; 
+  font-weight: 600; 
+  text-align: center;
+  margin-bottom: 1rem; 
+  color: #0b8630;
+}
+
+
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem; 
+}
+
+.form-label {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500; 
+  color: #135e8f; 
+  text-align: left;
+
+}
+
+.form-control input {
+  width: 100%;
+  height: 80px; 
+  font-size: 1rem; 
+  padding: 12px; 
+  border: 1px solid #d2d6dc; 
+  border-radius: 0.375rem; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+.form-control input:focus {
+  border-color: #5a67d8; 
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.5); 
+}
+
+.form-message {
+  color: #e53e3e; 
+  margin-top: 0.25rem; 
+}
+
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-button {
+  width: 100%; 
+  background-color: #0b8630; 
+  color: #ffffff; 
+  font-weight: 600; 
+  padding: 8px 12px; 
+  border-radius: 0.375rem; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #4c51bf; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.error-message {
+  color: #e53e3e; 
+  margin-top: 0.5rem; 
+}

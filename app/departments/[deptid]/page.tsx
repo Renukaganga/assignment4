@@ -1,14 +1,22 @@
 
 import './dept.css';
-
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+  TableCaption,
+} from "@/components/ui/table";
 
 export default function Deptid({ params }: { params: { deptid: string } }) {
   return (
     <>
-     <br></br>
+      <br></br>
       <div className="container">
         <h1 className="mt-5">
-         Department of <span className="dept">{params.deptid}</span><br></br>
+          Department of <span className="dept">{params.deptid}</span><br></br>
         </h1>
         <hr />
         <div className="row mt-4">
@@ -23,23 +31,23 @@ export default function Deptid({ params }: { params: { deptid: string } }) {
             <p>
               One of the key factors of our department is our faculty. We have 10 PhDs in our department, and the remaining faculty members are pursuing PhDs in various reputed universities. Our faculty members are actively involved in publishing their research articles in various reputed journals and conferences.
             </p>
-            <table className="table mt-5">
-              <tbody>
-                <tr>
-                  <td>Number of Faculty</td>
-                  <td>100</td>
-                </tr>
-                <tr>
-                  <td>Number of Students Passed Till Now</td>
-                  <td>5000</td>
-                </tr>
-                <tr>
-                  <td>Number of Placements Till Now</td>
-                  <td>4000</td>
-                </tr>
+            <Table className="table mt-5">
              
-              </tbody>
-            </table>
+              <TableBody className="table-body">
+                <TableRow className="table-row">
+                  <TableCell className="table-cell">Number of Faculty</TableCell>
+                  <TableCell className="table-cell">100</TableCell>
+                </TableRow>
+                <TableRow className="table-row">
+                  <TableCell className="table-cell">Number of Students Passed Till Now</TableCell>
+                  <TableCell className="table-cell">5000</TableCell>
+                </TableRow>
+                <TableRow className="table-row">
+                  <TableCell className="table-cell">Number of Placements Till Now</TableCell>
+                  <TableCell className="table-cell">4000</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
         </div>
       </div>

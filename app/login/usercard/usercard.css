@@ -12,7 +12,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: calc(33.333% - 20px);
-    
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: larger;
     padding-left: 100px;
@@ -46,4 +46,3 @@
       width: calc(100% - 20px);
     }
   }
-  
