@@ -66,56 +66,50 @@ const LoginForm = () => {
 
   return (
     <div>
-    <div className="login-container">
-      <div className="login-form-container">
-        <h2 className="login-heading">Login</h2>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleLogin)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem className="form-item">
-                  <FormLabel className="form-label">Username</FormLabel>
-                  <FormControl>
-                    <Input className="form-control" placeholder="Enter your username" {...field} />
-                  </FormControl>
-                  <FormMessage className="form-message" />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem className="form-item">
-                  <FormLabel className="form-label">Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" className="form-control" placeholder="Enter your password" {...field} />
-                  </FormControl>
-                  <FormMessage className="form-message" />
-                </FormItem>
-              )}
-            />
-            <div >
-              <Button className="submit-button" type="submit">Login</Button>
-            </div>
-            {error && <FormMessage className="error-message">Invalid username or password</FormMessage>}
-          </form>
-          <div>
-           
-          </div>
-        </Form>
-        
-      </div>
-    </div>
-    <div>
-        {success && <UserCard />}
+      <div className="login-container">
+        <div className="login-form-container">
+          <h2 className="login-heading">Login</h2>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(handleLogin)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem className="form-item">
+                    <FormLabel className="form-label">Username</FormLabel>
+                    <FormControl>
+                      <Input className="form-control" placeholder="Enter your username" {...field} />
+                    </FormControl>
+                    <FormMessage className="form-message" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="password"
+                render={({ field }) => (
+                  <FormItem className="form-item">
+                    <FormLabel className="form-label">Password</FormLabel>
+                    <FormControl>
+                      <Input type="password" className="form-control" placeholder="Enter your password" {...field} />
+                    </FormControl>
+                    <FormMessage className="form-message" />
+                  </FormItem>
+                )}
+              />
+              <div >
+                <Button className="submit-button" type="submit">Login</Button>
+              </div>
+              {error && <FormMessage className="error-message">Invalid username or password</FormMessage>}
+            </form>
+          </Form>
         </div>
+      </div>
+      <div>
+        {success && <UserCard />}
+      </div>
     </div>
   );
 };
 
 export default LoginForm;
-
-
